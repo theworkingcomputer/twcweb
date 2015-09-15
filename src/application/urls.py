@@ -11,9 +11,6 @@ from application import views
 
 
 ## URL dispatch rules
-# App Engine warm up handler
-# See http://code.google.com/appengine/docs/python/config/appconfig.html
-app.add_url_rule('/_ah/warmup', 'warmup', view_func=views.warmup)
 
 # Home page
 app.add_url_rule('/', 'home', view_func=views.home)
@@ -69,9 +66,6 @@ app.add_url_rule('/about', 'about', view_func=views.about)
 # Web pages and services page
 app.add_url_rule('/web_pages', 'web_pages', view_func=views.web_pages)
 
-
-# Contrived admin-only view example
-app.add_url_rule('/admin_only', 'admin_only', view_func=views.admin_only)
 
 
 ## Error handlers
